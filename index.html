@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the Number</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #c3ec52, #0ba29d);
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+        }
+        
+        main {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+            max-width: 400px;
+            width: 100%;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        #txt {
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        #txt p, #txt h4 {
+            margin: 10px 0;
+        }
+
+        .form h3 {
+            margin: 10px 0;
+        }
+
+        .form label {
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .form input[type="text"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .form input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .form input[type="submit"]:hover {
+            background-color: #218838;
+        }
+
+        footer h2 {
+            margin-top: 20px;
+        }
+
+        #lorh span {
+            font-size: 24px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>Guess the Number Game</h1>
+        <div id="txt">
+            <p>Try to guess a number between 1 to 100</p>
+            <h4>Previous Guesses:</h4>
+            <span id="Guesses"></span>
+        </div>
+
+        <div class="form">
+            <h3>Guesses left: <span id="guessleft">10</span></h3>
+            <label for="Guess"><h3>Guess the number</h3></label>
+            <input type="text" id="input" name="Guess">
+            <input type="submit" id="submit" value="Submit">
+        </div>
+
+        <div id="start"></div>
+    </main>
+    <footer>
+        <h2 id="lorh"><span id="LorH"></span></h2>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
